@@ -1,0 +1,21 @@
+.main-btn {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 20px 50px;
+    border: 2px solid black;
+    background-color: transparent;
+    transition: all ease 0.3s;
+}
+
+.main-btn:hover {
+    background: black;
+    color: white;
+}
+
+@media(max-width:424px) {
+    .main-btn {
+        padding: 10px 25px;
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,42 @@
+.favorite-header {
+    text-align: center;
+    margin: 30px 0px;
+}
+.favorite-groop {
+    margin: 30px;
+    min-height: 500px;
+}
+.favorite-items{
+    gap: 15px;
+}
+.favorite-item{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+}
+.favorite-img {
+    height: 340px;
+}
+.item-info {
+    gap: 10px;
+}
+.item-title {
+    font-size: 24px;
+    font-weight: 500;
+}
+.item-brend {
+    font-size: 18px;
+    font-weight: 600;
+}
+.btn-groop {
+    display: flex;
+    gap: 10px;
+    text-align: center;
+}
+.select-btn {
+    display: block;
+    height: 34px;
+    width: 34px;
+    background-color: black;
+}

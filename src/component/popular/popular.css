@@ -1,0 +1,227 @@
+.popular {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 18% 82%;
+    gap: 30px;
+}
+
+.popularity {
+    border-right: 2px solid #C4C4C4;
+    grid-column: 1/1;
+    padding-left: 5px;
+}
+.popularity h4 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 31px;
+}
+.cheklist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0px;
+    text-transform: uppercase;
+}
+.cheklist label{
+    width: 100%;
+    padding-left: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color:#3F3F3F;
+    cursor: pointer;
+}
+.cheklist input {
+    cursor: pointer;
+}
+.goods-popular {
+    grid-column: 2/2;
+}
+.goods-popular a {
+    color: black;
+}
+
+
+.goods-list {
+    display: flex;
+    gap: 26px;
+    flex-wrap: wrap;
+}
+.goods-item {
+    width: 23%;
+    cursor: pointer;
+    transition: 0.1s all ease;
+}
+
+.goods-item img {
+    width: 100%;
+}
+
+.categori {
+    font-size: 12px;
+    font-weight: 600;
+    color: #BDBDBD;
+    padding-bottom: 0px;
+    padding-top: 14px;
+    margin: 0;
+    text-transform: uppercase;
+}
+.title {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0px;
+    margin: 0px;
+}
+.discount {
+    display: flex;
+    gap: 15px;
+    padding-top: 18px;
+    align-items: end;
+}
+.discount-price {
+    font-size: 22px;
+    font-weight: 600;
+    color:#EB5757;;
+    margin: 0px;
+}
+.old-price {
+    font-size: 14px;
+    font-weight: 400;
+    color: #828282;
+    margin: 0px;
+    text-decoration: line-through;
+}
+.price {
+    font-size: 22px;
+    font-weight: 400;
+}
+.goods-popular button {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    color: #828282;
+    border: 2px solid #C4C4C4;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 25px 50px;
+    transition: 0.5 all ease;
+}
+.goods button:hover {
+    color: #302c2c;
+    border: 2px solid #302c2c;
+    transition: 0.5 all ease;
+}
+.goods .sameWear {
+    display: none;
+}
+
+@media(max-width: 1351px) {
+    .popular {
+        gap: 25px;
+    }
+    .goods-list {
+        gap: 20px;
+    }
+    .goods-popular .goods-item{
+        width: 31%;
+        
+    }
+}
+
+@media(max-width: 1200px) {
+    .popularity h4{
+        padding-bottom: 5px;
+    }
+}
+
+@media(max-width: 1059px) {
+.popular {
+    grid-template-columns: 20% 80%;
+}
+.goods-popular .goods-item {
+    width: 31%;
+}
+}
+
+@media(max-width: 843px) {
+    .popular {
+        grid-template-columns: 1fr;
+        margin: 14px;
+    }
+    .goods {
+        grid-column: 1/1;
+    }
+    .popularity {
+        display: none;
+    }
+    .goods .sameWear {
+        display: block;
+    }
+    .goods-popular .goods-item {
+        width: 48%;
+    }
+}
+
+@media(max-width:625px) {
+    .goods-popular .goods-item {
+        width: 46%;
+    }
+}
+
+@media(max-width:412px) {
+    .categori {
+        font-size: 10px;
+    }
+    .title {
+        font-size: 12px;
+    }
+    .price,.discount-price {
+        font-size: 12px;
+    }
+    .old-price {
+        font-size: 10px;
+    }
+}
+.real-checkBox {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+
+}
+.decor-checkBox {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #828282;
+    height: 11px;
+    width: 11px;
+    margin-right:6px;
+}
+.decor-checkBox::before {
+    content: "";
+    background: url(../../../public/img/form/checkbox.svg) center center no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 11px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(0);
+    transition: all ease 0.1s;
+}
+.checkBox:hover > .decor-checkBox {
+    border: 1px solid#3F3F3F;
+}
+
+
+.real-checkBox:checked + .decor-checkBox {
+    background-color: black;
+    border: 1px solid black;
+}
+.real-checkBox:checked + .decor-checkBox::before {
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}

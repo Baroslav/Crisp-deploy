@@ -1,0 +1,242 @@
+.seles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 29px;
+    margin: 30px;
+}
+.seles button {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 20px 50px;
+    border: 2px solid black;
+    background-color: transparent;
+    transition: all ease 0.3s;
+}
+.seles button:hover {
+    background: black;
+    color: white;
+}
+.seles-blocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: black;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+.seles-blocks h3 {
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+.seles-blocks p {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 50px;
+}
+.seles-blocks-1 h3,.seles-blocks-2 h3 {
+    font-size: 48px;
+}
+
+.seles-blocks-3 h3 {
+    font-size: 74px;
+}
+
+.seles-blocks-1 {
+    grid-column:1/1;
+    grid-row: 1/1;
+    background: linear-gradient(270deg, rgba(241, 239, 240, 0) 0%, #F1F0F0 10.79%, #F3F0EF 98.67%);
+}
+.seles-blocks-2 {
+    grid-column:1/1;
+    grid-row: 2/2;
+    grid-template-columns: 75% 25%;
+    background: linear-gradient(90deg, #F7E0D5 0%, #F3DCD2 83.85%, rgba(243, 220, 210, 0.14) 100%);
+
+}
+.seles-blocks-3  {
+    grid-column:2/2;
+    grid-row: 1/3;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background: linear-gradient(90deg, #E0DED3 0%, #E0DDD5 86.82%, #E0DDD5 100%);
+
+}
+
+.seles-look {
+    grid-column: 2/2;
+    padding: 82px 0px 82px 0px;
+}
+
+.seles-seles-brend {
+    grid-column: 1/1;
+    padding: 115px 0px 115px 82px;
+}
+.seles-discount {
+    padding: 0px 0px 103px 82px;
+    grid-column: 1/1;
+    grid-row: 2/2;
+}
+.seles-item {
+    z-index: 2;
+}
+.seles-blocks img {
+    position: absolute;
+    z-index: 1;
+}
+.seles-blocks-1 img {
+    bottom: 0;
+}
+.seles-blocks-2 img {
+    bottom: 0;
+}
+.seles-blocks-2 img {
+    bottom: 0;
+    right: 0;
+}
+.seles-blocks-3 img {
+    right: 0;
+    bottom: 3%;
+}
+
+@media (max-width:1300px) {
+    .seles-look {
+        padding: 82px 20px 82px 20px;
+        grid-column: 1/3;
+    }
+    
+    .seles-brend {
+        padding: 115px 0px 115px 82px;;
+    }
+    .seles-discount {
+        padding: 10px 0px 0px 20px;
+        grid-row: 2/2;
+        grid-column: 1/3;
+    }
+}
+
+@media (max-width:1025px) {
+    .seles {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .seles-blocks-1 {
+        width: 100%;    
+        order: 1;
+    }
+    .seles-blocks-2 {
+        width: 100%;    
+        order: 3;
+    }
+    .seles-blocks-2 img {
+        width: 85%;
+    }
+    .seles-blocks-3 {
+        width: 100%;    
+        order: 2;
+        height: 800px;
+    }
+    .seles-blocks-3 img {
+        width: 90%;
+    }
+    .seles-look {
+        padding: 82px 20px 82px 20px;
+        grid-column: 2/2;
+    }
+    .seles-discount {
+        padding: 0px 0px 103px 82px;
+        grid-column: 1/1;
+        grid-row: 2/2;
+    }
+    .seles-blocks-1 h3,.seles-blocks-2 h3 {
+        font-size: 36px;
+    }
+    .seles-blocks-3 h3 {
+        font-size: 46px;
+    }
+    .seles-blocks p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:670px) {
+    .seles-blocks-1 {
+        height: 300px;
+    }
+    .seles-blocks-1 img {
+        width: 60%;
+    }
+    .seles-blocks-2 {
+        height: 300px;
+    }
+    .seles-blocks-2 img {
+        width: 70%;
+    }
+    .seles-blocks-3 {
+        height: 500px;
+        padding: 0px 0px 34px 0px;
+    }
+    .seles-look{
+        padding: 18px 26px 20px 0px;
+    }
+    .seles-brend {
+        padding: 26px 0px 27px 30px;
+    }
+    .seles-discount {
+        grid-column: 1/3;
+        grid-row: 2/2;
+        padding: 26px 0px 27px 30px;
+    }
+    .seles-blocks p {
+        padding-bottom:15px;
+    }
+}
+
+@media (max-width:540px) {
+    .seles {
+        margin: 14px;
+    }
+    .seles-blocks-1 h3,.seles-blocks-2 h3 {
+        font-size: 20px;
+    }
+    .seles-blocks-3 h3 {
+        font-size: 40px;
+    }
+    .seles-blocks p {
+        font-size: 16px;
+    }
+    .seles button {
+        font-size: 14px;
+        padding: 10px 25px;
+    }
+}
+
+@media (max-width:424px) {
+    .seles-blocks-1 h3,.seles-blocks-2 h3 {
+        font-size: 16px;
+    }
+    .seles-blocks-3 h3 {
+        font-size: 26px;
+    }
+    .seles-blocks p {
+        font-size: 10px;
+    }
+    .seles button {
+        font-size: 14px;
+        padding: 10px 25px;
+    }
+    .seles-blocks-3 img {
+        width: 140%;
+    }
+    .seles button {
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 400;
+        padding: 10px 25px;
+    }
+}
+

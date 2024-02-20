@@ -1,0 +1,116 @@
+.main-header {
+    margin: 30px;
+    background: url(../../../public/img/blog/blog-img-bg.svg) center center no-repeat;
+    background-size: cover;
+    padding: 189px 40px;
+}
+.main-header h1 {
+    text-align: center;
+    max-width: 1200px;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: white;
+    font-size: 40px;
+}
+
+.blog {
+    display: grid;
+    max-width: 1200px;
+    grid-template-columns: 75% 25%;
+    gap: 100px;
+    margin: 0 auto;
+    padding: 30px;
+}
+.blog-content h3{
+    font-size: 36px;
+}
+.blog-content p{
+    font-size: 16px;
+    line-height: 30px;
+}
+.blog-content img {
+    width: 100%;
+}
+.advertising {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    width: 100%;
+    margin-top: 60px;
+
+}
+
+.advertising div {
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
+    height: 617px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media(max-width:1519px) {
+    .blog {
+        display: grid;
+        max-width: 1400px;
+        grid-template-columns: 70% 25%;
+        gap: 50px;
+        margin: 30px;
+        padding: 0px;
+    }
+}
+
+
+@media(max-width:1024px) {
+    .blog {
+        display: grid;
+        max-width: 100%;
+        grid-template-columns: 65% 30%;
+        gap: 50px;
+        margin: 30px;
+        padding: 0px;
+    }
+}
+
+@media(max-width:821px) {
+    .blog {
+        display: block;
+        max-width: 100%;
+        margin: 30px;
+        padding: 0px;
+    }
+    .main-header {
+        margin: 0px;
+        padding: 50px 20px;
+    }
+    .main-header h1 {
+        font-size: 24px;
+    }
+}
+
+@media(max-width:424px) {
+    .blog {
+        display: block;
+        max-width: 100%;
+        margin: 15px;
+        padding: 0px;
+    }
+    .main-header {
+        margin: 0px;
+        padding: 50px 20px;
+    }
+    .main-header h1 {
+        font-size: 20px;
+    }
+    .blog {
+        padding: 0px;
+    }
+    .blog-content h3{
+        font-size: 18px;
+    }
+    .blog-content p{
+        font-size: 12px;
+        line-height: 30px;
+    }
+}
