@@ -7,20 +7,52 @@ import { useState } from 'react'
 const size = ['osfa', 'w26','w27','w28','w29','w30','w31','w32','w33','w34','w35','w36','w38','w40','w42','w44','w46','w48','w50','w52']
 
 const GoodsItem =()=> {
-    const dispach =useDispatch()
-    const cartItem =useSelector((state:any)=>state.cartReducer.cartItem)
-    const favoritem =useSelector((state:any)=>state.favoriteReducer.favorite)
-    const {id}=useParams()
-    const index =Number(id)
-    
-    // const totalPrice =(goodsList[index].price-(goodsList[index].price*(10/100)))*quantity
-    if (!id) {
-        return <div>Ідентифікатор не вказаний</div>; // або будь-який інший вміст
+    const [quant , setQuant] = useState<number>(1)
+    const [selectedSize , setSelectedSize] = useState<string>('')
+    const dispach = useDispatch()
+    const cartItem = useSelector((state:any)=>state.cartReducer.cartItem)
+    const favoritem = useSelector((state:any)=>state.favoriteReducer.favorite)
+    const {id} = useParams()
+    const index = Number(id)
+    const totalPrice =(goodsList[index].price-(goodsList[index].price*(10/100)))*quant
+    const newAddItem = {
+        id : goodsList[index].id,
+        title : goodsList[index].title, 
+        img : goodsList[index].img , 
+        price : totalPrice , 
+        color : goodsList[index].color , 
+        size : selectedSize , 
+        quantity : quant , 
     }
 
-    const addCart =(item:Object)=> {
-        if(!cartItem.includes(item)){
-            dispach({type:"ADD_TO_CART", payLoad:item})
+
+    const addQuant = () => (
+        setQuant(quant+1)
+    )
+    const subQuant = () => {
+        if(quant>1) {
+            setQuant(quant-1)
+        }
+    }
+
+    if (!id) {
+        return <div>Ідентифікатор не вказаний</div> // або будь-який інший вміст
+    }
+
+    const couseSize = (item: string) => {
+        setSelectedSize(item)
+        const selectSize = document.getElementById(item)
+        const cousenSize = document.getElementById(selectedSize)
+        if(selectedSize != item) {
+            cousenSize?.classList.remove('active')
+            selectSize?.classList.add('active')
+        }       
+    }
+
+    const addCart =()=> { 
+        const isItemInCart = cartItem.some((item: { id: number }) => item.id === newAddItem.id);
+        if(!isItemInCart){
+            dispach({type:"ADD_TO_CART", payLoad:newAddItem})
         }
     }
 
@@ -35,6 +67,9 @@ const GoodsItem =()=> {
 
     return(
         <section className="goods-item-select">
+            <div className="message">
+                <p>Ваше замовлення додано в кошик</p>
+            </div>
             <div className="item">
                 <div className="goods-images">
                     <img src={`../../img/goods/${index+1}.png`} alt="" />
@@ -44,7 +79,7 @@ const GoodsItem =()=> {
                     <h4>{goodsList[index].title}</h4>
                     <div className="selected-color">
                         <h3>Select Color</h3>
-                        <div className="color-block">
+                        <div className="color-block active">
                             <div 
                             className="iner-block" 
                             style={{backgroundColor: goodsList[index].color}}>
@@ -55,13 +90,11 @@ const GoodsItem =()=> {
                         <h3>Select size (Inches)</h3>
                         <div className="size">
                            <div className="size-cells">
-                                {
+                            {
                             size.map((item:string)=>(
-                                        <p id={item} 
-                                        >
-                                            {item}</p>
-                                        ))     
-                                }
+                                        <p onClick={()=>couseSize(item)} id={item}>{item}</p>
+                                ))     
+                            }
                             </div>        
                          </div>
                     </div>
@@ -69,26 +102,26 @@ const GoodsItem =()=> {
                         <div className="quantitu">
                             <p>quantity</p>
                             <div className='quantity-counter'>
-                                <span>-</span>
-                                    <p>{goodsList[index].quantity}</p>
-                                <span>+</span>
+                                <span onClick={subQuant}>-</span>
+                                    <p>{quant}</p>
+                                <span onClick={addQuant} >+</span>
                             </div>
                         </div>
                         <div className="total-price">
                             <p>total-price</p>
                             {goodsList[index].discount ? 
                                 <span className="discount">
-                                {/* <p className="discount-price">{totalPrice.toFixed(2)} EUR</p> */}
+                                <p className="discount-price">{totalPrice.toFixed(2)} EUR</p>
                                 </span>
                                 :
-                                <p className="price">{goodsList[index].price} EUR</p>
+                                <p className="price">{totalPrice.toFixed(2)} EUR</p>
                                 }
                         </div>
                     </div>
-                    <div className="button-section">
+                    <div className="button-section">    
                         <button 
                         className='addButton'
-                        onClick={()=>addCart(goodsList[index])}
+                        onClick={()=>addCart()}
                         >Add to bag
                         </button>
                         <button 

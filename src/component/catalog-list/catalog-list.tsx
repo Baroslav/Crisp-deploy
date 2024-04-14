@@ -13,7 +13,6 @@ export const goodsList = [
         color:'#F3ECE2',
         size : ['osfa', 'w26','w27','w28','w29','w30','w31','w32','w33','w34','w35','w36','w38','w40','w42','w44','w46','w48','w50','w52'],
         brend:'state',
-        quantity:1,
         dressLength:'short'
     },
     {
@@ -25,7 +24,6 @@ export const goodsList = [
         color: '#DAB1B1',
         size : ['w34','w35','w36','w38','w40','w42','w44','w46','w48','w50','w52'],
         brend:'cooper',
-        quantity:1,
         dressLength:'knee length'
     },
     {
@@ -37,7 +35,6 @@ export const goodsList = [
         color: '#292A2D',
         size : ['osfa', 'w26','w27','w28',,'w40','w42','w44','w46','w48','w50','w52'],
         brend:'cooper',
-        quantity:1,
         dressLength:'hight low'
     },
     {
@@ -50,7 +47,6 @@ export const goodsList = [
         color: '#292A2D',
         size : ['osfa', 'w26','w27','w28','w29','w30','w31','w32','w33','w34','w35','w36','w38','w40','w42','w44','w46','w48','w50','w52'],
         brend:'cece',
-        quantity:1,
         dressLength:'short'
     },
     {
@@ -62,7 +58,6 @@ export const goodsList = [
         color:'#971E34',
         size : ['osfa', 'w26','w27','w28','w29','w30','w31','w32','w33','w34','w35','w36'],
         brend:'donna ricco',
-        quantity:1,
         dressLength:'long'
     },
     {
@@ -75,7 +70,6 @@ export const goodsList = [
         color: '#292A2D',
         size : ['osfa', 'w26','w27','w28','w29','w30','w31','w32','w33','w34','w35','w36'],
         brend:'state',
-        quantity:1,
         dressLength:'short'
     },
     {
@@ -87,7 +81,6 @@ export const goodsList = [
         color:'#F3ECE2',
         size : ['osfa', ,'w31','w32','w33','w34','w35','w36','w38','w40','w42','w44','w46','w48','w50','w52'],
         brend:'donna ricco',
-        quantity:1,
         dressLength:'short'
     },
     {
@@ -99,7 +92,6 @@ export const goodsList = [
         color: '#DAB1B1',
         size : ['osfa', 'w26','w27','w28','w29','w30','w31','w32','w33','w34','w35','w36','w38','w40','w42','w44','w46','w48','w50','w52'],
         brend:'state',
-        quantity:1,
         dressLength:'knee length'
     },
     {
@@ -111,7 +103,6 @@ export const goodsList = [
         color: '#292A2D',
         size : ['osfa', 'w26','w27','w28','w29','w30','w31','w32','w33','w34','w35','w36','w38','w40','w42','w44','w46','w48','w50','w52'],
         brend:'state',
-        quantity:1,
         dressLength:'hight low'
     },
     {
@@ -124,7 +115,6 @@ export const goodsList = [
         color: '#292A2D',
         size : ['osfa', 'w26','w27','w28','w29','w30','w31','w32','w33','w34','w35','w36','w38','w40','w42','w44','w46','w48','w50','w52'],
         brend:'state',
-        quantity:1,
         dressLength:'short'
     },
     {
@@ -136,7 +126,6 @@ export const goodsList = [
         color:'#971E34',
         size : ['osfa', 'w26','w27','w28','w29','w30','w31'],
         brend:'alfani' ,
-        quantity:1,
         dressLength:'long',
     },
     {
@@ -149,7 +138,6 @@ export const goodsList = [
         color: '#292A2D',
         size : ['osfa', 'w26','w27','w28','w29','w30','w31','w32','w33','w34','w35','w36','w38','w40','w42','w44','w46','w48','w50','w52'],
         brend:'cece',
-        quantity:1,
         dressLength:'short'
     },
     {
@@ -162,7 +150,6 @@ export const goodsList = [
         color: '#292A2D',
         size : ['w31','w32','w33','w34','w35','w36','w38','w40','w42','w44','w46','w48','w50','w52'],
         brend:'cece',
-        quantity:1,
         dressLength:'short'
     },
     {
@@ -174,7 +161,6 @@ export const goodsList = [
         color:'#F3ECE2',
         size : ['osfa', 'w26','w27','w28','w29','w30','w31','w32','w33','w34','w35','w36','w38','w40','w42','w44','w46','w48','w50','w52'],
         brend:'alfani',
-        quantity:1,
         dressLength:'short'
     },
     {
@@ -186,7 +172,6 @@ export const goodsList = [
         color: '#DAB1B1',
         size : ['osfa', 'w26','w27','w28','w29','w30','w31','w32','w33','w34','w35','w36','w38','w40','w42','w44','w46','w48','w50','w52'],
         brend:'alfani',
-        quantity:1,
         dressLength:'knee length'
     },
     {
@@ -198,7 +183,6 @@ export const goodsList = [
         color: '#292A2D',
         size : ['osfa', 'w26','w27','w28','w29','w30','w31','w32','w33','w34','w35','w36','w38','w40','w42','w44','w46','w48','w50','w52'],
         brend:'alfani',
-        quantity:1,
         dressLength:'hight low'
     },
     {
@@ -211,7 +195,6 @@ export const goodsList = [
         color: '#292A2D',
         size : ['osfa', 'w26','w27','w28','w29','w30','w31','w32','w33','w34','w35','w36','w38','w40','w42','w44','w46','w48','w50','w52'],
         brend:'alfani',
-        quantity:1,
         dressLength:'short'
     },
     {
@@ -223,7 +206,6 @@ export const goodsList = [
         color:'#971E34',
         size : ['osfa', 'w26','w27','w28','w29','w30','w31','w32','w33','w34','w35','w36','w38','w40','w42','w44','w46','w48','w50','w52'],
         brend:'alfani',
-        quantity:1,
         dressLength:'long'
     },
     {
@@ -236,7 +218,6 @@ export const goodsList = [
         color: '#292A2D',
         size : ['osfa', 'w26','w27','w28','w29','w30','w31','w32','w33','w34','w35','w36','w38','w40','w42','w44','w46','w48','w50','w52'],
         brend:'alfani',
-        quantity:1,
         dressLength:'short'
     }
 ]

@@ -8,6 +8,8 @@ const Cart =()=> {
     const cartItem =useSelector((state:any)=>state.cartReducer.cartItem)
     const favorite=useSelector((state:any)=>state.favoriteReducer.favorite)
 
+    console.log(cartItem)
+
     const deletCart =(item:Object)=>{
         dispach({type:"REMOVE_FROM_CART",payLoad:item})
     }
