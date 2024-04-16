@@ -51,13 +51,19 @@ const Cart =()=> {
                                     <img className='goods-img' src={item.img} alt="" />
                                     <div className="titleAndColor">
                                         <h3>{item.title}</h3>
-
+                                        <div className="color-block active">
+                                            <div className="iner-block" 
+                                            style={{backgroundColor: item.color}}>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <p className="price-cart">{item.price} EUR</p>
-                                <p className='size-cart'></p>
+                                <p className='size-cart'>
+                                    {item.size}
+                                </p>
                                 <span className="quntitu">
-                                    1
+                                    {item.quantity}
                                 </span>
                                 <p className="totl">{item.price}</p>
                                 <div className="cart-buttons">
@@ -90,7 +96,7 @@ const Cart =()=> {
                                             <img src={item.img} alt="" />
                                             <div className="item-info">
                                                 <h3 className='item-title'>{item.title}</h3>
-                                                <p><span>Size:</span> {item.size[0]}</p>
+                                                <p><span>Size:</span> {item.size}</p>
                                                 <div className='color-info'>
                                                     <span>Color:</span>
                                                     <div className="color-block active">
@@ -100,17 +106,10 @@ const Cart =()=> {
                                                         </div>
                                                      </div>
                                                 </div>
+                                                <p><span>Quantity:</span> {item.quantity}</p>
+                                                <p><span>Price</span> {item.price} EUR</p>
                                             </div>
                                         </div>
-                                            <div className="quantityAndPrice">
-                                                <div className='quantity-counter'>
-                                                    <span>-</span>
-                                                        <p>{item.quantity}</p>
-                                                    <span>+</span>
-                                                </div>
-                                                <h3><span>Price</span> {item.price} EUR</h3>
-                                            </div>
-        
                                     </div>
                                 ))
                                 }
@@ -125,7 +124,7 @@ const Cart =()=> {
                             <div className="total-order-price">
                                 <p className="subtotal">
                                     <span>Subtotal</span>
-                                    <span>{total}</span>
+                                    <span>{total} EUR</span>
                                 </p>
                                 <p className="tax">
                                     <span>Tax</span>
@@ -133,7 +132,7 @@ const Cart =()=> {
                                 </p>
                                 <p className="order-total">
                                     <span>Order Total</span>
-                                    <span>{total}</span>
+                                    <span>{total} EUR</span>
                                 </p>
                             </div>
                             <button>proceed to checkout</button>

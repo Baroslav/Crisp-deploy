@@ -15,15 +15,6 @@ const GoodsItem =()=> {
     const {id} = useParams()
     const index = Number(id)
     const totalPrice =(goodsList[index].price-(goodsList[index].price*(10/100)))*quant
-    const newAddItem = {
-        id : goodsList[index].id,
-        title : goodsList[index].title, 
-        img : goodsList[index].img , 
-        price : totalPrice , 
-        color : goodsList[index].color , 
-        size : selectedSize , 
-        quantity : quant , 
-    }
 
 
     const addQuant = () => (
@@ -49,10 +40,24 @@ const GoodsItem =()=> {
         }       
     }
 
+
     const addCart =()=> { 
+        const newAddItem = {
+            id : goodsList[index].id,
+            title : goodsList[index].title, 
+            img : goodsList[index].img , 
+            price : totalPrice , 
+            color : goodsList[index].color , 
+            size : selectedSize , 
+            quantity : quant , 
+        }
         const isItemInCart = cartItem.some((item: { id: number }) => item.id === newAddItem.id);
-        if(!isItemInCart){
+
+        if(!isItemInCart && selectedSize){
             dispach({type:"ADD_TO_CART", payLoad:newAddItem})
+        }
+        else if(selectedSize == '') {
+            alert('Select size')
         }
     }
 
@@ -67,8 +72,8 @@ const GoodsItem =()=> {
 
     return(
         <section className="goods-item-select">
-            <div className="message">
-                <p>Ваше замовлення додано в кошик</p>
+            <div className={`message`}>
+                <p></p>
             </div>
             <div className="item">
                 <div className="goods-images">

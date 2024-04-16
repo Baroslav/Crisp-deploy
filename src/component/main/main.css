@@ -1,3 +1,6 @@
+body {
+    overflow-x: hidden;
+}
 main {
     margin: 21px;
     background: url(../../../public/img/main/bg.png) center center no-repeat;
